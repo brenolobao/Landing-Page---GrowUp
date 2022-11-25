@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .3s;
+    
+}
+body{
+    background: linear-gradient(to right,rgb(194, 4, 185,.1) 10%,rgb(214, 233, 245,.2)95%),url(background.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 100vh;
+    animation: bg 1.5s ease-in-out;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content:center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 10%;
+    animation:main 1.5s ease-in-out;
+    
+}
+.title{
+    font-size: 5em;
+    font-weight: bold;
+    width: 70%;
+    line-height: .9em;
+    background:linear-gradient(75deg,rgb(248, 98, 223) 0%,rgb(143, 207, 247)60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom:.5em;
+}
+.home-button{
+    color:white;
+    background:rgba(0,0,0,.7);
+    text-decoration:none;
+    font:normal 13pt arial;
+    width: 125px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 1em 1.2em;
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-button span{
+    font-size: 10pt;
+    font-weight: bold;
+}
+.home-button:hover{
+    padding: 1em 1em;   
+    background:black;
+}
+@keyframes main {
+    from{
+        opacity: 0;
+        transform:scale(.95);
+        transform: translateY(-75px);
+    }to{
+        
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 2em;
+}
+.logo{
+    font: bold 20pt arial;
+    text-transform: uppercase;
+}
+.menu-item{
+    margin: 0 .7em;
+    color:white;
+    text-decoration: none;
+    font: normal 15pt arial;
+}
+#signup{
+    color:black;
+}
+footer{
+    position: fixed;
+    bottom: 5%;
+    z-index: 2;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    padding: 1em 0;
+    
+}
+footer p{
+    width: 35%;
+    color:rgba(255,255,255,.8);
+    background:rgba(0,0,0,.3);
+    backdrop-filter: blur(2px);
+    padding: 1em;
+    font: normal 13pt arial;
+    animation:main 1.5s ease-in-out;
+}
+@keyframes bg{
+    from{
+        background-size: 150%;
+    }to{
+        background-size: 100%;
+    }
+}
